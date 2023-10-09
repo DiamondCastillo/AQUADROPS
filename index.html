@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Historieta</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="historieta-container">
+        <img src="escenas/1_gif.gif" id="imagen-historieta" usemap="#historieta-map">
+        <map name="historieta-map">
+            <area shape="rect" coords="20,200,220,400" onclick="retroceder()">
+            <area shape="rect" coords="580,200,780,400" onclick="avanzar()">
+            <area shape="rect" coords="X1,Y1,X2,Y2" onclick="tomarDecision('INTERVENE')">
+            <area shape="rect" coords="X3,Y3,X4,Y4" onclick="tomarDecision('NOT INTERVENE')">
+        </map>
+       
+        <div id="botones">
+            <button onclick="retroceder()">BACK</button>
+            <button onclick="avanzar()">NEXT</button>
+        </div>
+       <div id="decision-buttons" style="display: none;">
+        <button onclick="tomarDecision('INTERVENE')">INTERVENE</button>
+        <button onclick="tomarDecision('NOT INTERVENE')">NOT INTERVENE</button>
+    </div>
+    </div>
+    <script src="controller.js"></script>
+</body>
+</html>
